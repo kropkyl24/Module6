@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Week 6 - BC - Rhombus">
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+    <!-- Link your JavaScript file -->
+    <script src="script.js"></script>
+    <style>
+        .rhombus-container {
+            display: flex;
+        }
+        .rhombus-section {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <label>What is the size of Rhombus?</label><br>
+    <input type="text" id="rHeight" value="5" size="5">
+    <br>
+    <label>Choose color for Even position</label><br>
+    <select id="colorEven">
+        <option value="#0000FF">Blue</option>
+        <option value="#FF0000">Red</option>
+        <option value="#FF9900">Orange</option>
+    </select><br>
+
+    <label>Choose color for Odd position</label><br>
+    <select id="colorOdd">
+        <option value="#FF0099">Pink</option>
+        <option value="#33FF00">Green</option>
+        <option value="#660099">Purple</option>
+    </select>
+    <br>
+    <label>Choose symbol for Rhombus</label>
+    <select id="symbol">
+        <option value="*">*</option>
+        <option value="$">$</option>
+        <option value="@">@</option>
+    </select>
+    <br>
+    <button onclick="createRhombus(
+        document.getElementById('rHeight').value,
+        document.getElementById('colorEven').value,
+        document.getElementById('colorOdd').value,
+        document.getElementById('symbol').value);">Display Rhombus</button>
+    <div class="rhombus-container">
+        <div id="downRight" class="rhombus-section"></div><div id="upLeft" class="rhombus-section"></div>
+    </div>
+    <div class="rhombus-container">
+        <div id="upRight" class="rhombus-section"></div><div id="downLeft" class="rhombus-section"></div>
+    </div>
+</body>
+</html>
